@@ -1,0 +1,306 @@
+
+/* ==========================
+   RESET E CONFIGURAÇÕES
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #202124;
+    line-height: 1.6;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: auto;
+}
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+.cabecalho {
+    background: #ffffff;
+    border-top: 8px solid #4caf50;
+    text-align: center;
+    padding: 45px 20px;
+    margin-bottom: 40px;
+}
+
+.cabecalho h2 {
+    font-size: 0.95rem;
+    color: #5f6368;
+    font-weight: 500;
+}
+
+.cabecalho h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.cabecalho p,
+.cabecalho span {
+    color: #5f6368;
+}
+
+.cabecalho span {
+    display: block;
+    margin-top: 8px;
+}
+
+/* ==========================
+   SELEÇÃO DE TURMAS
+========================== */
+
+.selecao-turma {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.selecao-turma h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.selecao-turma > p {
+    color: #777777;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.turmas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.turma {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 25px 15px;
+    cursor: pointer;
+    color: #2e7d32;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.turma:hover {
+    background: #f1f8f4;
+    border-color: #4caf50;
+}
+
+/* ==========================
+   ÁREA DA TURMA
+========================== */
+
+.area-turma {
+    margin-bottom: 30px;
+}
+
+.cabecalho-turma {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.cabecalho-turma h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.botao-voltar {
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    color: #2e7d32;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.botao-voltar:hover {
+    background: #f1f8f4;
+}
+
+/* ==========================
+   UNIDADES
+========================== */
+
+.unidade {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.titulo-unidade {
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    padding: 18px 22px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2e7d32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.titulo-unidade:hover {
+    background: #f1f8f4;
+}
+
+.titulo-unidade:focus-visible,
+.turma:focus-visible,
+.botao-voltar:focus-visible,
+.botao:focus-visible {
+    outline: 3px solid rgba(76, 175, 80, 0.3);
+    outline-offset: 2px;
+}
+
+.seta {
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+.conteudo {
+    padding: 8px 20px 20px;
+}
+
+/* ==========================
+   ATIVIDADES
+========================== */
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+.info {
+    min-width: 0;
+}
+
+.info h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.info p {
+    color: #777777;
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+.botao {
+    flex-shrink: 0;
+    text-decoration: none;
+    background: #4caf50;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.botao:hover {
+    background: #388e3c;
+}
+
+.vazio {
+    color: #777777;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer {
+    text-align: center;
+    color: #777777;
+    font-size: 0.9rem;
+    padding: 40px 20px;
+}
+
+footer small {
+    display: block;
+    margin-top: 5px;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 700px) {
+    .cabecalho {
+        padding: 35px 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.6rem;
+    }
+
+    .turmas {
+        grid-template-columns: 1fr;
+    }
+
+    .turma {
+        padding: 18px;
+    }
+
+    .cabecalho-turma {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .botao-voltar {
+        width: 100%;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .botao {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.botao-indisponivel {
+    background: #9e9e9e;
+    cursor: not-allowed;
+    pointer-events: none;
+}
